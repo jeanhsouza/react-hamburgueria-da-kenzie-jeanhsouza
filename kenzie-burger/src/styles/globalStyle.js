@@ -1,4 +1,6 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
+import { createGlobalStyle } from "styled-components"
+
+export const GlobalStyled = createGlobalStyle`
 
 :root {
 	--brand100: #27AE60;
@@ -46,4 +48,6 @@ select {
 	font-family: var(--font-family);
 	font-size: var(--font-size-3);
 	line-height: var(--line-height);
-} */
+}
+
+`
