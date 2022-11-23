@@ -1,5 +1,6 @@
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
+import { createGlobalStyle } from "styled-components"
+
+export const GlobalStyled = createGlobalStyle`
 
 :root {
 	--brand100: #27AE60;
@@ -33,13 +34,13 @@ body {
 	background-color: var(--color-white-1);
 }
 
-.container {
+/* .container {
 	width: 75rem;
 	max-width: 100%;
 	margin: 0 auto;
 	padding-left: 1rem;
 	padding-right: 1rem;
-}
+} */
 
 button,
 input,
@@ -48,3 +49,5 @@ select {
 	font-size: var(--font-size-3);
 	line-height: var(--line-height);
 }
+
+`
