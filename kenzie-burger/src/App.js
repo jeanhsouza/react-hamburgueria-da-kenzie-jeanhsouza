@@ -8,7 +8,6 @@ import { ProductList } from "./components/ProductList";
 import { SearchContent } from "./components/SearchContent";
 import { api } from "./services/api";
 import { ContainerMain } from "./styles/container";
-
 import { GlobalStyled } from "./styles/globalStyle.js";
 
 // const GrayButton = styled.button`
