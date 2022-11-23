@@ -47,7 +47,7 @@ function App() {
 			<Header filter={filter} setFilter={setFilter} product={product} setInputValue={setInputValue} inputValue={inputValue}></Header>
 			<ContainerMain>
 				<section className="sectionProducts">
-          {(inputValue.length !==0) && <SearchContent setFilter={setFilter} product={product} inputValue={inputValue} setInputValue={setInputValue}/>}
+          {(inputValue.trim().length !==0) && <SearchContent setFilter={setFilter} product={product} inputValue={inputValue} setInputValue={setInputValue}/>}
           <ProductList product={product} filter={filter} setCart={setCart} cart={cart}/>
         </section>
 				<section className="sectionCart">

@@ -12,7 +12,7 @@ export function InputSearch({filter, setFilter, product, inputValue, setInputVal
 			return elem.name.toLowerCase().includes(searchValue.toLowerCase().trim()) || elem.category.toLowerCase().includes(searchValue.toLowerCase().trim())
 		})
 		console.log(e.target[0].value.length)
-		e.target[0].value.length === 0 ? setFilter(product) : setFilter(filterItems) 
+		searchValue.length === 0 ? setFilter(product) : setFilter(filterItems) 
 	}
 
 	return (
