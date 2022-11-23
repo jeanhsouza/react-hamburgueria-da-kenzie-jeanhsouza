@@ -1,3 +1,6 @@
+import { Button } from "../Button";
+import { StyledLi } from "./styles";
+
 export function Product( {product, cart,setCart} ) {
 
 	function addCart(){
@@ -10,14 +13,16 @@ export function Product( {product, cart,setCart} ) {
 	}
 
 	return (
-		<li>
-			<img src={product.img} alt="" />
+		<StyledLi>
+			<div className="imgBox">
+				<img src={product.img} alt="" />
+			</div>
 			<div className="textProduct">
 				<h3>{product.name}</h3>
-				<span>{product.category}</span>
-				<span>{product.price}</span>
-				<button onClick={addCart}>Adicionar</button>
+				<p>{product.category}</p>
+				<span>{product.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</span>
+				<Button click={addCart}>Adicionar</Button>
 			</div>
-		</li>
+		</StyledLi>
 	);
 }

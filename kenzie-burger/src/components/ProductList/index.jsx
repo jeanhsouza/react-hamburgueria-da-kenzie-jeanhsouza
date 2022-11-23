@@ -1,11 +1,14 @@
 import { Product } from "../Product";
+import { StyledUl } from "./styles";
 
-export function ProductList({product,cart,setCart}) {
+export function ProductList({product,filter,cart,setCart}) {
 	return (
-		<ul className="Cart">
-			{product.map(elem => {
+		<StyledUl>
+			{filter.length !== 0 ? (filter.map(elem => {
                 return <Product key={elem.id} product={elem} setCart={setCart} cart={cart}></Product>
-            })}
-		</ul>
+            })) : (product.map(elem => {
+                return <Product key={elem.id} product={elem} setCart={setCart} cart={cart}></Product>
+            }))}
+		</StyledUl>
 	);
 }

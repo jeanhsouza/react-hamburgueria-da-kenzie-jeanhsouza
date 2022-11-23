@@ -1,16 +1,15 @@
 import logo from "../../img/logo.svg"
+import { Container } from "../../styles/container"
+import { InputSearch } from "../InputSearch"
 import { StyledHeader } from "./styles"
 
-export function Header (){
+export function Header ({filter, setFilter, product, inputValue, setInputValue}){
     return(
         <StyledHeader>
-            <div className="container">
+            <Container>
                 <img src={logo} alt="" className="logoHeader" />
-                <div className="searchBar">
-                    <input type="text" placeholder="Digitar Pesquisa"/>
-                    <button>Pesquisar</button>
-                </div>
-            </div>
+                <InputSearch filter={filter} setFilter={setFilter} product={product} inputValue={inputValue} setInputValue={setInputValue}/>
+            </Container>
         </StyledHeader>
     )
 }

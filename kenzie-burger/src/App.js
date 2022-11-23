@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useState, useEffect } from "react";
 // import styled from "styled-components";
 import "./App.css";
@@ -6,6 +5,9 @@ import "./App.css";
 import { Cart } from "./components/Cart";
 import { Header } from "./components/Header";
 import { ProductList } from "./components/ProductList";
+import { SearchContent } from "./components/SearchContent";
+import { api } from "./services/api";
+import { ContainerMain } from "./styles/container";
 
 import { GlobalStyled } from "./styles/globalStyle.js";
 
@@ -19,12 +21,14 @@ import { GlobalStyled } from "./styles/globalStyle.js";
 function App() {
 	const [product, setProduct] = useState([]);
   const [cart, setCart] = useState([]);
+  const [filter, setFilter] = useState([]);
+  const [inputValue, setInputValue] = useState("");
+
+  console.log(filter)
 
 	useEffect(() => {
 		async function requestAPI() {
-			const request = await axios.get(
-				"https://hamburgueria-kenzie-json-serve.herokuapp.com/products"
-			);
+			const request = await api.get("products");
 			try {
 				const response = request.data;
 
@@ -40,15 +44,16 @@ function App() {
 	return (
 		<div className="App">
 			<GlobalStyled />
-			<Header></Header>
-			<main className="container">
+			<Header filter={filter} setFilter={setFilter} product={product} setInputValue={setInputValue} inputValue={inputValue}></Header>
+			<ContainerMain>
 				<section className="sectionProducts">
-          <ProductList product={product} setCart={setCart} cart={cart}/>
+          {(inputValue.length !==0) && <SearchContent setFilter={setFilter} product={product} inputValue={inputValue} setInputValue={setInputValue}/>}
+          <ProductList product={product} filter={filter} setCart={setCart} cart={cart}/>
         </section>
 				<section className="sectionCart">
 					<Cart cart={cart} setCart={setCart}/>
 				</section>
-			</main>
+			</ContainerMain>
 		</div>
 	);
 }

@@ -1,3 +1,5 @@
+import { StyledCartProduct } from "./styles";
+
 export function CartProduct ({elem, cart, setCart}){
 
     function removeCart(){
@@ -9,7 +11,7 @@ export function CartProduct ({elem, cart, setCart}){
     }
 
     return(
-    <li>
+    <StyledCartProduct>
         <img src={elem.img} alt="" />
         <div className="textProduct">
             <div className="textContent">
@@ -18,5 +20,5 @@ export function CartProduct ({elem, cart, setCart}){
             </div>
             <button onClick={removeCart}>Remover</button>
         </div>
-    </li>)
+    </StyledCartProduct>)
 }
