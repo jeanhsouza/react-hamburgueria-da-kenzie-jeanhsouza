@@ -23,8 +23,8 @@ export const StyledSearchContent = styled.div`
 		line-height: 17px;
 	}
 
-    @media (max-width:900px){
-        flex-direction: column;
-        gap:10px;
-    }
+	@media (max-width: 900px) {
+		flex-direction: column;
+		gap: 10px;
+	}
 `;

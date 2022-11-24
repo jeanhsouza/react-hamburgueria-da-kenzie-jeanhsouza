@@ -5,10 +5,10 @@ export const StyledButton = styled.button`
 	background-color: var(--brand100);
 	opacity: 70%;
 	color: var(--gray400);
-	border-radius: 8px;	
+	border-radius: 8px;
 	font-size: 16px;
 
-	:hover{
+	:hover {
 		opacity: 100%;
 	}
 `;

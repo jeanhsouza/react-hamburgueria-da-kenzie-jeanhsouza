@@ -88,14 +88,6 @@ body {
 	background-color: var(--color-white-1);
 }
 
-/* .container {
-	width: 75rem;
-	max-width: 100%;
-	margin: 0 auto;
-	padding-left: 1rem;
-	padding-right: 1rem;
-} */
-
 button,
 input,
 select {

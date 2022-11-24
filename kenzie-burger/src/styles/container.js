@@ -8,12 +8,10 @@ export const Container = styled.div`
 	padding-right: 1rem;
 `;
 
-
 export const ContainerMain = styled(Container)`
 	display: flex;
 
-	@media (max-width:900px) {
+	@media (max-width: 900px) {
 		flex-direction: column;
-		
 	}
 `;

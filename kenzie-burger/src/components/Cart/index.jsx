@@ -26,10 +26,7 @@ export function Cart({ cart, setCart }) {
 					);
 				})}
 			</ul>
-			{cart.length !== 0 && (
-					<TotalCart cart={cart} setCart={setCart}/>
-				)}
-			
+			{cart.length !== 0 && <TotalCart cart={cart} setCart={setCart} />}
 		</CartBox>
 	);
 }

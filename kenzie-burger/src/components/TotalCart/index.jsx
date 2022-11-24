@@ -8,12 +8,12 @@ export function TotalCart({ cart, setCart }) {
 		return acc + Number(actualValue.price);
 	}, 0);
 
-    function removeAll(){
-        toast.success("Carrinho limpo com sucesso!", {
-            position: toast.POSITION.TOP_CENTER
-          });
-        setCart([]);
-    }
+	function removeAll() {
+		toast.success("Carrinho limpo com sucesso!", {
+			position: toast.POSITION.TOP_CENTER,
+		});
+		setCart([]);
+	}
 
 	return (
 		<StyledTotalCart>

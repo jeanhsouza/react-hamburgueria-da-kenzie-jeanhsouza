@@ -24,8 +24,8 @@ export const StyledCartProduct = styled.li`
 		font-weight: 500;
 		font-size: 14px;
 		line-height: 15px;
-        color: var(--gray200);
-        background-color: transparent;
+		color: var(--gray200);
+		background-color: transparent;
 	}
 
 	.textProduct button:hover {

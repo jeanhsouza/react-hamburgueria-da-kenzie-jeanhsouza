@@ -9,9 +9,9 @@ export const StyledLi = styled.li`
 	border-radius: 5px;
 	overflow: hidden;
 
-	:hover{
-        border: 2px solid var(--gray100);
-    }
+	:hover {
+		border: 2px solid var(--gray100);
+	}
 
 	.imgBox {
 		width: 100%;
@@ -19,7 +19,7 @@ export const StyledLi = styled.li`
 		background-color: var(--gray400);
 		display: flex;
 		justify-content: center;
-		align-items: center;		
+		align-items: center;
 	}
 
 	.imgBox img {
@@ -62,7 +62,6 @@ export const StyledLi = styled.li`
 		line-height: 17px;
 	}
 
-	@media (max-width:900px) {
-		
+	@media (max-width: 900px) {
 	}
 `;

@@ -14,9 +14,9 @@ export const StyledHeader = styled.header`
 		div:nth-child(1) {
 			display: flex;
 			flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
+			justify-content: center;
+			align-items: center;
+			gap: 1rem;
 		}
 	}
 `;

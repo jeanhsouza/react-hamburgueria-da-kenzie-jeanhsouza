@@ -1,14 +1,18 @@
 import { Button } from "../Button";
 import { StyledSearchContent } from "./styles";
 
-export function SearchContent({setFilter,product, inputValue, setInputValue}) {
-	 const inputSearch = document.querySelector("#input") 
-
+export function SearchContent({
+	setFilter,
+	product,
+	inputValue,
+	setInputValue,
+}) {
+	const inputSearch = document.querySelector("#input");
 
 	function clearSearch() {
-        inputSearch.value = "";
+		inputSearch.value = "";
 		setInputValue("");
-        setFilter(product)
+		setFilter(product);
 	}
 
 	return (
