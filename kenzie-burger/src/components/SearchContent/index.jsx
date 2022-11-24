@@ -14,7 +14,7 @@ export function SearchContent({setFilter,product, inputValue, setInputValue}) {
 	return (
 		<StyledSearchContent>
 			<span>
-				Resultados para: <strong>{inputValue}</strong>
+				Resultados para: <strong>"{inputValue.trim()}"</strong>
 			</span>
 			<Button click={clearSearch}>Limpar busca</Button>
 		</StyledSearchContent>

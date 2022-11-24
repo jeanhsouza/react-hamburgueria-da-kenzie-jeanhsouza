@@ -1,12 +1,10 @@
 import { useState, useEffect } from "react";
-// import styled from "styled-components";
-import "./App.css";
-
 import { Cart } from "./components/Cart";
 import { Header } from "./components/Header";
 import { ProductList } from "./components/ProductList";
 import { SearchContent } from "./components/SearchContent";
 import { api } from "./services/api";
+import { StyledApp } from "./styles/App";
 import { ContainerMain } from "./styles/container";
 import { GlobalStyled } from "./styles/globalStyle.js";
 
@@ -41,7 +39,7 @@ function App() {
 	}, []);
 
 	return (
-		<div className="App">
+		<StyledApp>
 			<GlobalStyled />
 			<Header filter={filter} setFilter={setFilter} product={product} setInputValue={setInputValue} inputValue={inputValue}></Header>
 			<ContainerMain>
@@ -53,7 +51,7 @@ function App() {
 					<Cart cart={cart} setCart={setCart}/>
 				</section>
 			</ContainerMain>
-		</div>
+		</StyledApp>
 	);
 }
 
